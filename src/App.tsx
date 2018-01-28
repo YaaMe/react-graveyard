@@ -7,11 +7,11 @@ import {
 } from 'react-router-dom';
 
 import { Layout,
-         Menu,
          Button } from 'antd';
 import Login from './containers/Login';
+import DIYHeader from './containers/Header';
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 const Home = () => (
     <div style={{ background: '#fff', padding: 24, minHeight: 1200}}>
         <h2>Home</h2>
@@ -64,18 +64,7 @@ class App extends React.Component {
         return (
             <Router>
                 <Layout>
-                    <Header style={{ position: 'fixed', width: '100%' }}>
-                        <Menu
-                            mode="horizontal"
-                            theme="dark"
-                            defaultSelectedKeys={['0']}>
-                            <Menu.Item key="0"><Link to="/">Home</Link></Menu.Item>
-                            <Menu.Item><Link to="/about">About</Link></Menu.Item>
-                            <Menu.Item><Link to="/topics">Topics</Link></Menu.Item>
-                            <Menu.Item><Link to="/login">Login</Link></Menu.Item>
-                            <Menu.Item><Link to="http://www.baidu.com" target="_blank">click to out</Link></Menu.Item>
-                        </Menu>
-                    </Header>
+                    <DIYHeader />
                     <Content style={{ padding: '0 50px', marginTop: 64}}>
                         <Route exact path="/" component={Home}/>
                         <Route path="/about" component={About}/>
