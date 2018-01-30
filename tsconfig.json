@@ -16,6 +16,9 @@
         "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": false,
         "noUnusedLocals": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
         "baseUrl": "src",
         "paths": {
             "*": [ "*" ]

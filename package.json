@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@types/redux-devtools": "^3.0.42",
         "antd": "^3.1.4",
         "axios": "^0.17.1",
         "classnames": "^2.2.5",
@@ -14,6 +15,8 @@
         "react-router-dom": "^4.2.2",
         "react-router-redux": "^4.0.8",
         "redux": "^3.7.2",
+        "redux-pack": "^0.1.5",
+        "redux-thunk": "^2.2.0",
         "style-loader": "^0.19.1"
     },
     "scripts": {
@@ -35,6 +38,8 @@
         "commitizen": "^2.3.0",
         "conventional-changelog-cli": "^1.2.0",
         "husky": "^0.13.1",
+        "json-server": "^0.12.1",
+        "mockjs": "^1.0.1-beta3",
         "redux-devtools": "^3.4.1",
         "tsconfig-paths-webpack-plugin": "^2.0.0",
         "validate-commit-msg": "^2.11.1"
