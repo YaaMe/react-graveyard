@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link, Route } from 'react-router-dom';
+import { Input } from 'antd';
 
 const Hello = () => (
     <div>
@@ -7,13 +8,15 @@ const Hello = () => (
     </div>
 )
 
-const Login = ({ match }) => (
-    <div>
-        <h3> 123123123 </h3>
-        <Link to={`${match.url}/test`}> click to test</Link>
-        <Route path={`${match.url}/test`} component={Hello}/>
-    </div>
-)
-
-export default Login
-
+export default class Login extends React.Component {
+    render({ match }) {
+        return (
+            <div>
+                <h3> 123123123 </h3>
+                <Input placeholder="Basic usage" />
+                <Link to={`${match.url}/test`}> click to test</Link>
+                <Route path={`${match.url}/test`} component={Hello}/>
+            </div>
+        )
+    }
+}

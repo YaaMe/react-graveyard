@@ -9,7 +9,7 @@ import {
 import { Layout,
          Button } from 'antd';
 import Login from './containers/Login';
-import DIYHeader from './containers/Header';
+import { DIYHeader } from 'containers';
 
 const { Footer, Content } = Layout;
 const Home = () => (
@@ -59,7 +59,7 @@ const Topics = ({ match }) => (
     </div>
 )
 
-class App extends React.Component {
+export default class App extends React.Component {
     render() {
         return (
             <Router>
@@ -67,10 +67,10 @@ class App extends React.Component {
                     <DIYHeader />
                     <Content style={{ padding: '0 50px', marginTop: 64}}>
                         <Route exact path="/" component={Home}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/topics" component={Topics}/>
-                        <Route path="/login" component={Login}/>
-                        <Route path="/register" component={About}/>
+                        <Route path="/t2" component={About}/>
+                        <Route path="/t3" component={Topics}/>
+                        <Route path="/t4" component={About}/>
+                        <Route path="/t5" component={About}/>
                     </Content>
                     <Footer />
                 </Layout>
@@ -79,5 +79,3 @@ class App extends React.Component {
     }
 }
 
-
-export default App;

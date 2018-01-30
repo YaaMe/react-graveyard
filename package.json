@@ -9,15 +9,12 @@
         "diabelb-react-scripts-ts": "^2.10.2",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
+        "react-icons": "^2.2.7",
         "react-redux": "^5.0.6",
         "react-router-dom": "^4.2.2",
         "react-router-redux": "^4.0.8",
         "redux": "^3.7.2",
-        "style-loader": "^0.19.1",
-        "webpack": "^3.10.0",
-        "webpack-bundle-analyzer": "^2.9.2",
-        "webpack-config-utils": "^2.3.0",
-        "webpack-dev-server": "^2.11.1"
+        "style-loader": "^0.19.1"
     },
     "scripts": {
         "start": "react-scripts-ts start",
