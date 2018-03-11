@@ -10,5 +10,4 @@ export const server = axios.create({
     headers: {
         'Content-Type': 'application/json',
     },
-
 })

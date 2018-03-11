@@ -1,7 +1,8 @@
 import { server } from 'utils/Axios';
 
 export enum ACTION_TYPE {
-    LOGIN = 'LOGIN'
+    LOGIN = 'LOGIN',
+    LOGOUT = 'LOGOUT'
 }
 
 export const login = value => {

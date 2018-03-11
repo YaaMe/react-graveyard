@@ -1,5 +1,5 @@
 import { handle } from 'redux-pack';
-import { USER_ACTION } from 'actions';
+import { ACTION_TYPE as USER_ACTION } from 'actions/user';
 
 export default (state = {}, action) => {
     switch (action.type) {
