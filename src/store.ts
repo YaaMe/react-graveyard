@@ -2,6 +2,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import { middleware as reduxPackMiddleware } from 'redux-pack'
 import { createBrowserHistory } from 'history';
+import { storageMiddleware } from 'utils/Storage';
 
 import thunk from 'redux-thunk';
 import reducers from 'reducers';
@@ -12,6 +13,7 @@ const middleware = routerMiddleware(history);
 let newMiddleware = applyMiddleware(
     thunk,
     reduxPackMiddleware,
+    storageMiddleware,
     middleware
 );
 
