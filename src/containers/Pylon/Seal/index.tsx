@@ -58,7 +58,7 @@ const Topics = ({ match }) => (
 
 export default ({ match }) => (
     <Layout>
-        <DIYHeader match={match}/>
+        <DIYHeader/>
         <Content style={{ padding: '0 50px', marginTop: 64}}>
             <Route exact path={`${match.url}/`} component={Home}/>
             <Route path={`${match.url}/tab2`} component={About}/>

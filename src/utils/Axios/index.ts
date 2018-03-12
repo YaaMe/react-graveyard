@@ -15,11 +15,7 @@ export const server = axios.create({
     timeout: TIMEOUT,
     headers: {
         'Content-Type': 'application/json',
-    },
-    transformResponse: [(data) => {
-        let { body } = JSON.parse(data);
-        return body;
-    }]
+    }
 })
 
 export const wrapServer = opt => {

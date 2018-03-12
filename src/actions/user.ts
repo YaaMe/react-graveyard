@@ -14,3 +14,7 @@ export const login = value => {
         })
     }
 };
+
+export const logout = () => ({
+    type: ACTION_TYPE.LOGOUT
+})
