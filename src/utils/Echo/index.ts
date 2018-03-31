@@ -1,19 +1,11 @@
 import { ACTION_TYPE as USER_ACTION } from 'actions/user';
-import { KEY, LIFECYCLE } from 'redux-pack';
+import { filterPack } from 'utils/Tools';
 import { message } from 'antd';
 
-const unpack = (action, echoMsg) => {
-    const { meta } = action;
-    const lifecycle = meta ? meta[KEY.LIFECYCLE] : null;
-    switch (lifecycle) {
-        case LIFECYCLE.SUCCESS: message.info(echoMsg); break;
-        default: ;
-    }
-}
-
 export const echoMiddleware = store => next => action => {
+    console.log(action.type)
     switch (action.type) {
-        case USER_ACTION.LOGIN: unpack(action, 'user is login'); break;
+        case USER_ACTION.LOGIN: filterPack(action, () => message.info('user is login')); break;
         default: ;
     }
     return next(action);
