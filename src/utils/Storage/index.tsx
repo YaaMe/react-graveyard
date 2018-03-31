@@ -26,7 +26,7 @@ export const initState = key => {
 
 export const storageMiddleware = store => next => action => {
     switch (action.type) {
-        case USER_ACTION.LOGIN: storage(STORAGE_KEY.USER, action); break;
+        case USER_ACTION.LOGIN: filterPack(action, () => storage(STORAGE_KEY.USER, action)); break;
         case USER_ACTION.LOGOUT: clear(STORAGE_KEY.USER); break;
         default: ;
     }
