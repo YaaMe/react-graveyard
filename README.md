@@ -23,7 +23,7 @@ git commit前请先阅读[文档](http://www.ruanyifeng.com/blog/2016/01/commit_
 + 待回调success需要操作component的异步action处理方案
 + 默认控制非stateless变更的方案，待研究subcribe订阅模型
 + components/containers 精确区分要点
-
++ redux-pack middleware的入口改写，以解决在middleware里对应处理的不便之处
 
 ### remark
 
