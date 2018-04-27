@@ -1,4 +1,4 @@
-import { KEY, LIFECYCLE, middleware } from 'redux-pack';
+import { KEY, LIFECYCLE } from 'redux-pack';
 export { LIFECYCLE } from 'redux-pack';
 
 export const filterPack = (action, callback, status = LIFECYCLE.SUCCESS) => {
