@@ -5,7 +5,7 @@
     "dependencies": {
         "@types/redux-devtools": "^3.0.42",
         "antd": "^3.1.4",
-        "axios": "^0.17.1",
+        "axios": "^0.18.0",
         "classnames": "^2.2.5",
         "diabelb-react-scripts-ts": "^2.10.2",
         "react": "^16.2.0",
@@ -14,10 +14,8 @@
         "react-redux": "^5.0.6",
         "react-router-dom": "^4.2.2",
         "react-router-redux": "^4.0.8",
-        "redux": "^3.7.2",
-        "redux-pack": "^0.1.5",
-        "redux-thunk": "^2.2.0",
-        "style-loader": "^0.19.1"
+        "redux": "^4.0.0",
+        "style-loader": "^0.21.0"
     },
     "scripts": {
         "start": "react-scripts-ts start",
@@ -29,19 +27,19 @@
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
     },
     "devDependencies": {
-        "@types/jest": "^22.0.1",
-        "@types/node": "^9.3.0",
+        "@types/jest": "^23.1.2",
+        "@types/node": "^10.3.6",
         "@types/react": "^16.0.34",
         "@types/react-dom": "^16.0.3",
         "@types/react-router-dom": "^4.2.3",
         "@types/redux": "^3.6.0",
         "commitizen": "^2.3.0",
-        "conventional-changelog-cli": "^1.2.0",
-        "husky": "^0.13.1",
-        "json-server": "^0.12.1",
+        "conventional-changelog-cli": "^2.0.1",
+        "husky": "^0.14.3",
+        "json-server": "^0.14.0",
         "mockjs": "^1.0.1-beta3",
         "redux-devtools": "^3.4.1",
-        "tsconfig-paths-webpack-plugin": "^2.0.0",
+        "tsconfig-paths-webpack-plugin": "^3.2.0",
         "validate-commit-msg": "^2.11.1"
     }
 }

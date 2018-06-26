@@ -1,14 +1,14 @@
-import { KEY, LIFECYCLE } from 'redux-pack';
-export { LIFECYCLE } from 'redux-pack';
+// import { KEY, LIFECYCLE } from 'redux-pack';
+// export { LIFECYCLE } from 'redux-pack';
 
-export const filterPack = (action, callback, status = LIFECYCLE.SUCCESS) => {
-    const { meta } = action;
-    const lifecycle = meta ? meta[KEY.LIFECYCLE] : null;
-    if (lifecycle === status) {
-        return callback(meta);
-    }
-    return action;
-}
+// export const filterPack = (action, callback, status = LIFECYCLE.SUCCESS) => {
+//     const { meta } = action;
+//     const lifecycle = meta ? meta[KEY.LIFECYCLE] : null;
+//     if (lifecycle === status) {
+//         return callback(meta);
+//     }
+//     return action;
+// }
 
 // FIX: do not change action type
 // export const splitPack = action => {
