@@ -1,0 +1,11 @@
+.sample {
+    color: red;
+    label {
+        color: skyblue;
+    }
+    :global {
+        .marked {
+            color: purple;
+        }
+    }
+}
