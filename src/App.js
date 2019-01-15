@@ -3,9 +3,9 @@ import logo from './logo.svg';
 import './App.scss';
 
 import Sample from 'containers/Sample';
-import { AppContext } from 'contexts';
+import { Providers } from 'contexts';
 import store from 'store';
-const { Provider } = AppContext;
+const { AppProvider } = Providers;
 
 class App extends Component {
   render() {
@@ -14,9 +14,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
-          <Provider value={store}>
+          <AppProvider value={store}>
             <Sample/>
-          </Provider>
+          </AppProvider>
         </header>
       </div>
     );
