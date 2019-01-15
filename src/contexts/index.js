@@ -1,18 +1,5 @@
 import React from 'react';
 
-export const AppContext = React.createContext('app');
-export const SampleContext = React.createContext('sample');
-
-export const connectApp = (
-  mapStateToProps, mapDispatchToProps
-) => ConnectedComponent => (props) => (
-  <AppContext.Consumer>
-    {store => <ConnectedComponent
-                {...mapStateToProps(store.getState())}
-                {...mapDispatchToProps(store.dispatch)}
-    />}
-  </AppContext.Consumer>)
-
 const formatConnectName = (
   contextName
 ) => `connect${contextName.charAt(0).toUpperCase()}${contextName.slice(1)}`
@@ -30,11 +17,12 @@ const create = (contexts) => {
       mapStateToProps, mapDispatchToProps
     ) => Target => props => (
       <Consumer>
-        {store => <Target
-                    {...mapStateToProps(store.getState())}
-                    {...mapDispatchToProps(store.dispatch)}
-                    {...props}
-        />}
+        {store => (
+          <Target
+            {...mapStateToProps(store.getState())}
+            {...mapDispatchToProps(store.dispatch)}
+            {...props}
+          />)}
       </Consumer>
     )
   })

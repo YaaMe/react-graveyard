@@ -3,9 +3,9 @@ import Button from '@material-ui/core/Button';
 import { connectors } from 'contexts';
 import {sample} from './sample.module.scss';
 
-const mapStateToProps = ({ test: {testid}}) => ({ testid })
+const mapStateToProps = ({ test: { testid }}) => ({ testid })
 const mapDispatchToProps = dispatch => ({
-  test: dispatch({type: 'TEST'})
+  test: dispatch({ type: 'TEST' })
 })
 
 const Sample = ({ testid }) => (
@@ -17,7 +17,5 @@ const Sample = ({ testid }) => (
     </div>
   </div>
 );
-
-
 
 export default connectors.connectApp(mapStateToProps, mapDispatchToProps)(Sample);
