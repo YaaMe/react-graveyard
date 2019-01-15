@@ -15,9 +15,9 @@ import { createBrowserHistory } from 'history';
 export const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
 // TODO: remove dev tools or split env
-// const create = (typeof window !== 'undefined' && (<any> window).devToolsExtension)
-//       ? (<any> window).devToolsExtension({ actionsBlacklist: ['@@redux-form'] })(createStore)
-//       : createStore;
+const create = (typeof window !== 'undefined' && window.devToolsExtension)
+      ? window.devToolsExtension({ actionsBlacklist: ['@@redux-form'] })(createStore)
+      : createStore;
 
 
-export default store = applyMiddleware(middleware)(create)(reducers);
+export default applyMiddleware(middleware)(create)(reducers);

@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.scss';
 
 import Sample from 'containers/Sample';
+import { AppContext } from 'contexts';
+import store from 'store';
+const { Provider } = AppContext;
 
 class App extends Component {
   render() {
@@ -11,11 +14,10 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
-          <Sample/>
+          <Provider value={store}>
+            <Sample/>
+          </Provider>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
