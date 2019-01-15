@@ -7,16 +7,12 @@ const mapStateToProps = ({ test: {testid}}) => ({ testid })
 const mapDispatchToProps = dispatch => ({
   test: dispatch({type: 'TEST'})
 })
-const ChildSample = ({ testid }) => {
-  return (<div>{testid}</div>)
-}
 
-let Test = connectors.connectApp(mapStateToProps, mapDispatchToProps)(ChildSample)
-const Sample = () => (
+const Sample = ({ testid }) => (
   <div>
     <label className="marked">outside</label>
     <div className={sample}>
-      <Test/>
+      <div>sample: {testid}</div>
       <Button variant="contained" color="primary">Hello <label>world</label></Button>
     </div>
   </div>
@@ -24,4 +20,4 @@ const Sample = () => (
 
 
 
-export default Sample;
+export default connectors.connectApp(mapStateToProps, mapDispatchToProps)(Sample);

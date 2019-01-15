@@ -44,6 +44,6 @@ const contexts = [
   'app'
 ];
 const Contexts = create(contexts);
-console.log(Contexts)
+
 export const Providers = Contexts.Providers;
 export const connectors = Contexts.connectors;
