@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import axios from 'axios';
 
 export const server = axios.create({
@@ -17,4 +18,8 @@ export const fetchMiddleware = store => next => action => {
   return next(action);
 };
 
-export const useFetch = () => {};
+export const useFetch = (requestBody, onSuccess, onError) => {
+  useEffect(() => {
+    server.request(requestBody).then(onSuccess).catch(onError);
+  }, requestBody);
+};
